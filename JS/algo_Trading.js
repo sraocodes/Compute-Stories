@@ -4,19 +4,21 @@
         'background': '#ffffff',
         'primaryTextColor': '#000000',
         'fontFamily': 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
-        'fontSize': '14px',
-        'nodePadding': '10px',
+        'fontSize': '16px',
+        'nodePadding': '12px',
+        'rankSpacing': 50,
+        'nodeSpacing': 50,
         'edgeLabelBackground':'#ffffff',
         'fontWeight': 'bold'
     }
 }}%%
 flowchart TB
     %% Define styles for subgraphs with enhanced text styles
-    classDef marketData fill:#FFD700,stroke:#333,stroke-width:2px, color:#1a1a1a, fontWeight:bold, fontSize:16px
-    classDef signalGen fill:#87CEFA,stroke:#333,stroke-width:2px, color:#1a1a1a, fontWeight:bold, fontSize:16px
-    classDef trendAnalysis fill:#90EE90,stroke:#333,stroke-width:2px, color:#1a1a1a, fontWeight:bold, fontSize:16px
-    classDef tradeExec fill:#FFB6C1,stroke:#333,stroke-width:2px, color:#1a1a1a, fontWeight:bold, fontSize:16px
-    classDef nodeStyle fill:#ffffff,stroke:#333,stroke-width:1px, color:#333333, fontSize:14px
+    classDef marketData fill:#FFD700,stroke:#333,stroke-width:2px, color:#1a1a1a, fontWeight:bold, fontSize:18px
+    classDef signalGen fill:#87CEFA,stroke:#333,stroke-width:2px, color:#1a1a1a, fontWeight:bold, fontSize:18px
+    classDef trendAnalysis fill:#90EE90,stroke:#333,stroke-width:2px, color:#1a1a1a, fontWeight:bold, fontSize:18px
+    classDef tradeExec fill:#FFB6C1,stroke:#333,stroke-width:2px, color:#1a1a1a, fontWeight:bold, fontSize:18px
+    classDef nodeStyle fill:#ffffff,stroke:#333,stroke-width:1px, color:#333333, fontSize:16px
 
     %% Subgraph 1: Market Data Processing
     subgraph "Market Data Processing"

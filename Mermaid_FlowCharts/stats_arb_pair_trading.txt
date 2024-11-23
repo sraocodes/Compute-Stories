@@ -1,0 +1,21 @@
+stateDiagram-v2
+    [*] --> DataCollection: Collect Data
+    DataCollection --> PairSelection: Randomly Select Pairs
+    PairSelection --> Cointegration: Test Cointegration
+    Cointegration --> Analysis: p-value < 0.05
+    Cointegration --> PairSelection: p-value > 0.05
+
+    Analysis --> SpreadCalculation: Normalize Prices
+    SpreadCalculation --> ZScore: Calculate Spread and Z-Score
+
+    ZScore --> ShortSpread: z > 2
+    ZScore --> LongSpread: z < -2
+    ZScore --> NoAction: |z| < 2
+
+    note right of SpreadCalculation
+        Normalize Prices: Price(t)/Price(0)\nSpread = stock1_norm - stock2_norm
+    end note
+
+    note right of ZScore
+        Z-Score Calculation: z = (spread - mean) / std
+    end note
